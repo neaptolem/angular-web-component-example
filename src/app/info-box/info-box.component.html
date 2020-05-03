@@ -1,0 +1,8 @@
+<h3>{{title}}</h3>
+<div *ngIf="exchangeRate">
+  <div>{{exchangeRate?.date}}</div>
+  <div>Base:{{ exchangeRate?.base}}</div>
+  <div *ngFor="let item of ratesArr">
+    {{item[0]}}:{{item[1]}}
+  </div>
+</div>
