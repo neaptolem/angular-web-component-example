@@ -9,9 +9,9 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:lib": "ng build --prod && npm run build:js && npm run build:css",
-    "build:js": "cat dist/angular-elements-example/runtime-es5.*.js dist/angular-elements-example/polyfills-es5.*.js dist/angular-elements-example/custom-elements-es5-adapter.*.js dist/angular-elements-example/scripts.*.js dist/angular-elements-example/main-es5.*.js > example/elem-example.js",
+    "build:js": "cat dist/angular-elements-example/runtime-es5.*.js dist/angular-elements-example/polyfills-es5.*.js dist/angular-elements-example/scripts.*.js dist/angular-elements-example/custom-elements-es5-adapter.*.js dist/angular-elements-example/main-es5.*.js > example/elem-example.js",
     "build:css": "cat dist/angular-elements-example/styles.*.css > example/elem-example.css",
-    "serve": "http-server --gzip"
+    "serve": "http-server example --gzip"
   },
   "private": true,
   "dependencies": {
