@@ -3,27 +3,16 @@
 
 <head>
   <title>Example Website with Embedded Angular Web Component</title>
-  <script src="info-box.js"></script>
+  <script src="elem-example.js"></script>
   <link rel="stylesheet"
-        href="info-box.css">
+        href="elem-example.css">
 </head>
 
 <body>
   <div>
-    <info-box title="Exchange rate"></info-box>
+    <my-greeter first-name="John"
+                last-name="Doe"></my-greeter>
   </div>
 </body>
-<script>
-  (() => {
-    fetch('https://api.exchangeratesapi.io/latest')
-      .then((res) => res.json())
-      .then((res) => {
-        const infoBox = document.querySelector('info-box');
-        infoBox.setAttribute('data', JSON.stringify(res));
-      })
-      .catch(console.log);
-  })()
-
-</script>
 
 </html>
