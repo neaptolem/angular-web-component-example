@@ -26,25 +26,23 @@
             "styles": [
               "projects/angular-elements-example/src/styles.css"
             ],
-            "scripts": [
-              {
+            "scripts": [{
                 "input": "node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js",
                 "bundleName": "custom-elements-es5-adapter"
               },
               {
-                "input": "node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"
+                "input": "node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js",
+                "bundleName": "webcomponents-bundle"
               }
             ],
             "es5BrowserSupport": true
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "projects/angular-elements-example/src/environments/environment.ts",
-                  "with": "projects/angular-elements-example/src/environments/environment.prod.ts"
-                }
-              ],
+              "fileReplacements": [{
+                "replace": "projects/angular-elements-example/src/environments/environment.ts",
+                "with": "projects/angular-elements-example/src/environments/environment.prod.ts"
+              }],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -54,8 +52,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [
-                {
+              "budgets": [{
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
