@@ -2,7 +2,6 @@ import { Injector, NgModule } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
 import { ElementZoneStrategyFactory } from 'elements-zone-strategy';
-import { AppComponent } from './app.component';
 import { MyGreeterComponent } from './my-greeter/my-greeter.component';
 
 @NgModule({
@@ -13,6 +12,7 @@ import { MyGreeterComponent } from './my-greeter/my-greeter.component';
   ],
   imports: [BrowserModule],
   providers: [],
+  entryComponents: [MyGreeterComponent],
 })
 export class AppModule {
   constructor(injector: Injector) {
