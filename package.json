@@ -10,7 +10,8 @@
     "e2e": "ng e2e",
     "build:lib": "ng build --prod && npm run build:js && npm run build:css",
     "build:js": "cat dist/angular-elements-example/runtime-es5.*.js dist/angular-elements-example/polyfills-es5.*.js dist/angular-elements-example/custom-elements-es5-adapter.*.js dist/angular-elements-example/scripts.*.js dist/angular-elements-example/main-es5.*.js > example/elem-example.js",
-    "build:css": "cat dist/angular-elements-example/styles.*.css > example/elem-example.css"
+    "build:css": "cat dist/angular-elements-example/styles.*.css > example/elem-example.css",
+    "serve": "http-server --gzip"
   },
   "private": true,
   "dependencies": {
@@ -38,6 +39,7 @@
     "@angular/language-service": "~9.1.4",
     "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
+    "http-server": "^0.12.3",
     "ts-node": "~8.10.1",
     "tslint": "~6.1.2",
     "typescript": "~3.8.3"
